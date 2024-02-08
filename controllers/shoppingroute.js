@@ -10,5 +10,10 @@ router.post("/add",async(req,res)=>{
         status:"success"
     })
 })
+router.get("/view",async(req,res)=>{
+    let data=await shoppingmodel.find()
+    res.json(data)
+})
+
 
 module.exports=router
