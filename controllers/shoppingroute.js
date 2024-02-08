@@ -14,6 +14,11 @@ router.get("/view",async(req,res)=>{
     let data=await shoppingmodel.find()
     res.json(data)
 })
+router.post("/search",async(req,res)=>{
+    let input=req.body
+    let data=await shoppingmodel.find(input)
+    res.json(data)
+})
 
 
 module.exports=router
